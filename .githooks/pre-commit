@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Versioned pre-commit hook to clean notebook outputs before committing.
+# To activate, copy this file to .git/hooks/pre-commit and make it executable:
+#   cp .githooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+
+set -e
+ROOT_DIR=$(git rev-parse --show-toplevel)
+echo "Running tracked pre-commit hook: cleaning notebooks..."
+python3 "$ROOT_DIR/scripts/clean_notebooks.py" || true
+
+# Stage any notebooks that were changed by the cleaner
+git add "$(git ls-files -m | grep -E '\.ipynb$' || true)" || true
+
+exit 0

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Engagement Predictor Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Post Engagement Predictor</h1>
+    <p>
+      Write a short post and this model will estimate whether engagement
+      might be <strong>High</strong>, <strong>Medium</strong>, or <strong>Low</strong>.
+      This is a simplified demo version.
+    </p>
+
+    <label for="commentInput">Post</label>
+    <textarea id="commentInput" rows="6" placeholder="Type your post here..."></textarea>
+
+    <button id="predictButton">Predict engagement</button>
+
+    <div id="result" class="result">
+      <!-- Prediction appears here -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
