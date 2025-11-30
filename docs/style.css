@@ -80,21 +80,36 @@ button:hover {
   color: #991b1b;
 }
 
-/* Score bar */
+/* Score bars */
+.score-section {
+  margin-bottom: 20px;
+}
+
+.score-label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
 .score-bar-container {
   width: 100%;
   height: 10px;
   background: #e5e7eb;
   border-radius: 999px;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
 .score-bar {
   height: 100%;
   width: 0%;
-  background: #22c55e; /* puedes cambiarlo si quieres */
+  background: #22c55e;
   transition: width 0.3s ease;
+}
+
+/* Opcional: color distinto para Europa */
+#scoreBarEU {
+  background: #3b82f6;
 }
 
 /* Panels */

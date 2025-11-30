@@ -22,9 +22,17 @@
       Waiting for your comment...
     </div>
 
-    <!-- Score bar -->
-    <div class="score-bar-container">
-      <div id="scoreBar" class="score-bar"></div>
+    <!-- Score bars -->
+    <div class="score-section">
+      <div class="score-label">North America</div>
+      <div class="score-bar-container">
+        <div id="scoreBarNA" class="score-bar"></div>
+      </div>
+
+      <div class="score-label">Europe</div>
+      <div class="score-bar-container">
+        <div id="scoreBarEU" class="score-bar"></div>
+      </div>
     </div>
 
     <!-- Explanation + features -->
@@ -34,7 +42,7 @@
     </div>
 
     <div class="panel">
-      <h2>Extracted Features</h|2>
+      <h2>Extracted Features</h2>
       <ul id="debugFeatures" class="debug-features"></ul>
     </div>
 
@@ -45,7 +53,8 @@
         <thead>
           <tr>
             <th>Comment</th>
-            <th>Prediction</th>
+            <th>North America</th>
+            <th>Europe</th>
           </tr>
         </thead>
         <tbody></tbody>
