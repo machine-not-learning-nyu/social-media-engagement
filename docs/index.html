@@ -2,27 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Engagement Predictor Demo</title>
+  <title>Engagement Predictor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
-    <h1>Post Engagement Predictor</h1>
-    <p>
-      Write a short post and this model will estimate whether engagement
-      might be <strong>High</strong>, <strong>Medium</strong>, or <strong>Low</strong>.
-      This is a simplified demo version.
-    </p>
+  <div class="container">
+    <h1>Comment Engagement Predictor</h1>
 
-    <label for="commentInput">Post</label>
-    <textarea id="commentInput" rows="6" placeholder="Type your post here..."></textarea>
+    <label for="commentInput">Write your comment:</label>
+    <textarea
+      id="commentInput"
+      rows="4"
+      placeholder="Type a comment to predict its engagement..."
+    ></textarea>
 
-    <button id="predictButton">Predict engagement</button>
+    <button id="predictButton">Predict Engagement</button>
 
-    <div id="result" class="result">
-      <!-- Prediction appears here -->
+    <div id="result" class="result neutral">
+      Waiting for your comment...
     </div>
-  </main>
+
+    <!-- Score bar -->
+    <div class="score-bar-container">
+      <div id="scoreBar" class="score-bar"></div>
+    </div>
+
+    <!-- Explanation + features -->
+    <div class="panel">
+      <h2>Model Explanation</h2>
+      <ul id="explanationList" class="explanation-list"></ul>
+    </div>
+
+    <div class="panel">
+      <h2>Extracted Features (debug)</h2>
+      <ul id="debugFeatures" class="debug-features"></ul>
+    </div>
+
+    <!-- History -->
+    <div class="panel">
+      <h2>Prediction History</h2>
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Comment</th>
+            <th>Prediction</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
